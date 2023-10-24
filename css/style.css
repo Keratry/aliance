@@ -14,7 +14,8 @@ body {
     font-family: 'Noto Sans', sans-serif;
     min-height: 100%;
     overflow-anchor: none;
-    position: relative;
+    max-width: 1920px;
+    margin: auto;
     background-color: #FAFBFC;
 }
 
@@ -74,10 +75,12 @@ header a {
 
 .header-logo {
     padding: 25px 50px;
+
 }
 
 .header-logo img {
-    height: 100%;
+    height: 44px;
+    width: 140px;
 }
 
 
