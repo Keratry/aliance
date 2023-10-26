@@ -57,20 +57,26 @@ a {
 }
 
 
-header {
-    display: flex;
-    color: #fff;
-    height: 94px;
-    background: rgba(41, 45, 51, 0.90);
+.header {
+    min-height: 100vh;
 }
 
-header a {
+.header-image {
+    background: url(../img/header-bg.jpg) no-repeat top center;
+    background-size: cover;
+}
+
+.header a {
     color: inherit;
+    text-decoration: none;
 }
 
 .header-navbar {
     display: flex;
     flex-basis: 100%;
+    color: #fff;
+    height: 94px;
+    background: rgba(41, 45, 51, 0.90);
 }
 
 .header-logo {
@@ -86,12 +92,12 @@ header a {
 
 .header-nav {
     display: flex;
+    flex-basis: 100%;
     list-style: none;
     margin: 0;
     padding: 0 50px;
     align-items: center;
     gap: 50px;
-    text-align: center;
 }
 
 .header-phone {
