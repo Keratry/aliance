@@ -77,6 +77,12 @@ a {
     top: 0;
     width: 100%;
     border-bottom: 1px solid rgba(235, 235, 240, 0.20);
+    transition: background-color 0.2s;
+}
+
+.navbar-light {
+    background: #fff;
+    color: #292D33;
 }
 
 .navbar a {
@@ -90,11 +96,9 @@ a {
     flex-shrink: 0;
 }
 
-.navbar-logo img {
-    height: 44px;
-    width: 140px;
+.navbar-light .header-logo-path {
+    fill: #292D33;
 }
-
 
 .navbar-nav {
     display: flex;
