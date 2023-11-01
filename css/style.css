@@ -135,7 +135,7 @@ a {
 }
 
 .header-image {
-    background: url(../img/header-bg.jpg) no-repeat top center;
+    background: url(../img/header-bg.jpg) no-repeat bottom -45px center;
     background-size: cover;
     position: relative;
 }
