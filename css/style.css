@@ -64,7 +64,9 @@ a {
     display: inline-block;
 }
 
-
+.mobile-menu {
+    display: none;
+}
 
 .navbar {
     display: flex;
@@ -147,7 +149,7 @@ a {
 }
 
 .header-image {
-    background: url(../img/header-bg.jpg) no-repeat bottom -45px center;
+    background: url(../img/header-bg.jpg) no-repeat center bottom -45px;
     background-size: cover;
     position: relative;
 }
@@ -395,6 +397,101 @@ a {
     .mobile-menu-line:nth-child(2) {
         width: 80%;
     }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        overflow-y: auto;
+        z-index: 2;
+        background-color: #fff;
+        padding-top: 5rem;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .mobile-menu.is-open {
+        display: block;
+    }
+
+    .mobile-menu-nav {
+        list-style: none;
+        padding: 0;
+    }
+
+    .mobile-menu-nav-item {
+        margin-bottom: 30px;
+    }
+
+    .mobile-menu-link {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 160%;
+        color: #292d33;
+    }
+
+    .mobile-submenu {
+        list-style: none;
+        padding-left: 20px;
+        margin: 20px 0;
+    }
+
+    .mobile-submenu-item {
+        margin: 10px 0;
+    }
+
+    .mobile-submenu-link {
+        text-decoration: none;
+        color: #828A99;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 160%;
+    }
+
+    .mobile-phone {
+        display: block;
+        padding-top: 30px;
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 160%;
+        color: #292d33;
+        border-top: 1px solid #EBEBF0;
+    }
+
+    .mobile-info {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: #292D33;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 160%;
+        margin-bottom: 12px;
+    }
+
+    .mobile-info .icon {
+        fill: #5C8EE6;
+    }
+
+    .mobile-info-address {
+        font-style: normal;
+    }
+
+    .mobile-info-email {
+        text-decoration: none;
+        color: #292D33;
+    }
+
+    .social-link {
+        margin-right: 15px;
+    }
+
+
 
     .navbar-button .icon {
         display: block;
