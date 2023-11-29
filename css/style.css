@@ -290,6 +290,7 @@ a {
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .steps-item {
@@ -472,7 +473,7 @@ a {
     }
 
     .navbar {
-        height: 5rem;
+        height: 5.8rem;
     }
 
     .navbar-button {
@@ -503,6 +504,11 @@ a {
         justify-content: center;
     }
 
+    .logo-svg {
+        width: 10rem;
+        height: 100%;
+    }
+
     .navbar-nav {
         display: none;
     }
@@ -514,7 +520,7 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 22px 28px;
+        padding: 2.3rem 2.5rem;
         border-right: 1px solid rgba(235, 235, 240, 0.20);
     }
 
@@ -661,7 +667,7 @@ a {
     }
 
     .header-content {
-        padding-top: 3rem;
+        padding-top: 4rem;
     }
 
     .card {
@@ -674,11 +680,31 @@ a {
         max-width: 90%;
     }
 
-    .header-title {
-        font-size: 2rem;
+    .section {
+        margin: 100px auto;
     }
 
-    .header-content {
-        padding-top: 2rem;
+    .section-title {
+        font-size: 3rem;
+        margin-bottom: 2.5rem;
     }
+
+    .steps-title {
+        margin: 0.8334rem 0;
+    }
+
+    .steps-text {
+        margin-bottom: 2.167rem;
+    }
+
+    .production-cards {
+        margin-top: 2.5rem;
+    }
+
+    .card-content {
+        padding-top: 1.667rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
 }
