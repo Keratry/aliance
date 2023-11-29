@@ -95,8 +95,11 @@
         </a>
 
         <a href="/" class="navbar-logo">
-            <svg class="logo">
+            <svg class="logo-svg logo-light">
                 <use href="./img/sprite.svg#logo-light"></use>
+            </svg>
+            <svg class="logo-svg logo">
+                <use href="./img/sprite.svg#logo"></use>
             </svg>
         </a>
 
@@ -137,7 +140,7 @@
             <!-- /.header-content -->
 
             <!-- Главный контейнер слайдера -->
-            <div class="swiper">
+            <div class="swiper header-features-slider">
                 <!-- Обертка -->
                 <ul class="swiper-wrapper header-features">
                     <!-- Слайды -->
@@ -189,39 +192,6 @@
 
             </div><!-- /.swiper -->
 
-
-            <ul class="header-features">
-                <li class="header-features-item">
-                    <svg class="icon" width="36" height="36">
-                        <use href="./img/sprite.svg#time"></use>
-                    </svg>
-                    <p class="header-features-text">Непрерывная работа c 2017 года</p>
-                </li>
-                <li class="header-features-item">
-                    <svg class="icon" width="36" height="36">
-                        <use href="./img/sprite.svg#certificates"></use>
-                    </svg>
-                    <p class="header-features-text">Вся продукция сертифицирована</p>
-                </li>
-                <li class="header-features-item">
-                    <svg class="icon" width="36" height="36">
-                        <use href="./img/sprite.svg#control"></use>
-                    </svg>
-                    <p class="header-features-text">Контроль качества на всех этапах</p>
-                </li class="header-features-item">
-                <li class="header-features-item">
-                    <svg class="icon" width="36" height="36">
-                        <use href="./img/sprite.svg#delivery"></use>
-                    </svg>
-                    <p class="header-features-text">Возможны поставки по всей России</p>
-                </li>
-                <li class="header-features-item">
-                    <svg class="icon" width="36" height="36">
-                        <use href="./img/sprite.svg#speed"></use>
-                    </svg>
-                    <p class="header-features-text">Оперативное производство</p>
-                </li>
-            </ul>
         </div>
         <!-- /.container -->
     </header>
@@ -230,33 +200,150 @@
         <div class="container">
             <div class="separator"></div>
             <h2 class="section-title">схема работы</h2>
-            <ol class="steps">
-                <li class="steps-item">
-                    <span class="steps-num">01</span>
-                    <h3 class="steps-title">Знакомство</h3>
-                    <p class="steps-text">Безусловно, сплочённость команды профессионалов позволяет оценить значение
-                        форм воздействия.</p>
-                    <a href="#" class="steps-link">Оставить заявку</a>
-                </li>
-                <li class="steps-item">
-                    <span class="steps-num">02</span>
-                    <h3 class="steps-title">Заключение договора</h3>
-                    <p class="steps-text">Лишь интерактивные прототипы призваны к ответу.</p>
-                </li>
-                <li class="steps-item">
-                    <span class="steps-num">03</span>
-                    <h3 class="steps-title">Производство</h3>
-                    <p class="steps-text">А также стремящиеся вытеснить традиционное производство, нанотехнологии
-                        функционально разнесены на независимые элементы.</p>
-                </li>
-                <li class="steps-item">
-                    <span class="steps-num">04</span>
-                    <h3 class="steps-title">Доставка</h3>
-                    <p class="steps-text">В частности, экономическая повестка сегодняшнего дня говорит о возможностях
-                        приоритизации разума над эмоциями.</p>
-                </li>
-            </ol>
+            <!-- Slider main container -->
+            <div class="swiper steps-slider">
+                <!-- Additional required wrapper -->
+                <ol class="swiper-wrapper steps">
+                    <!-- Slides -->
+                    <li class="swiper-slide steps-item">
+                        <span class="steps-num">01</span>
+                        <h3 class="steps-title">Знакомство</h3>
+                        <p class="steps-text">Безусловно, сплочённость команды профессионалов позволяет оценить значение
+                            форм воздействия.</p>
+                        <a href="#" class="steps-link">Оставить заявку</a>
+                    </li>
+                    <li class="swiper-slide steps-item">
+                        <span class="steps-num">02</span>
+                        <h3 class="steps-title">Заключение договора</h3>
+                        <p class="steps-text">Лишь интерактивные прототипы призваны к ответу.</p>
+                    </li>
+                    <li class="swiper-slide steps-item">
+                        <span class="steps-num">03</span>
+                        <h3 class="steps-title">Производство</h3>
+                        <p class="steps-text">А также стремящиеся вытеснить традиционное производство, нанотехнологии
+                            функционально разнесены на независимые элементы.</p>
+                    </li>
+                    <li class="swiper-slide steps-item">
+                        <span class="steps-num">04</span>
+                        <h3 class="steps-title">Доставка</h3>
+                        <p class="steps-text">В частности, экономическая повестка сегодняшнего дня говорит о
+                            возможностях приоритизации разума над эмоциями.</p>
+                    </li>
+                </ol>
+
+                <div class="steps-buttons">
+                    <div class="steps-button-prev">
+                        <svg class="icon" width="36" height="24">
+                            <use href="./img/sprite.svg#arrow-prev"></use>
+                        </svg>
+                    </div>
+                    <div class="steps-button-next">
+                        <svg class="icon" width="36" height="24">
+                            <use href="./img/sprite.svg#arrow-next"></use>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </section>
+
+    <section class="section production section-production">
+        <div class="container">
+            <div class="separator"></div>
+            <h2 class="section-title">Контрактное производство</h2>
+            <div class="cards production-cards">
+                <a href="#" class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">Автомобильная химия</h3>
+                        <p class="card-text">
+                            Безусловно, сплочённость команды профессионалов позволяет
+                            оценить значение форм воздействия.
+                        </p>
+                    </div>
+                    <!-- /.card-content -->
+                    <picture>
+                        <source type="image/webp" srcset="img/avto-him.webp">
+                        <source type="image/jpeg" srcset="img/avto-him.jpg">
+                        <img src="img/avto-him.png" alt="Автомобильная химия" class="card-image" />
+                    </picture>
+                </a>
+                <a href="#" class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">Бытовая химия</h3>
+                        <p class="card-text">
+                            А также стремящиеся вытеснить традиционное производство,
+                            нанотехнологии функционально разнесены на независимые элементы.
+                        </p>
+                    </div>
+                    <!-- /.card-content -->
+                    <picture>
+                        <source type="image/webp" srcset="img/household.webp">
+                        <source type="image/jpeg" srcset="img/household.jpg">
+                        <img src="img/household.png" alt="Бытовая химия" class="card-image" />
+                    </picture>
+                </a>
+                <a href="#" class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">Дезинфицирующие средства</h3>
+                        <p class="card-text">
+                            Лишь интерактивные прототипы призваны к ответу.
+                        </p>
+                    </div>
+                    <!-- /.card-content -->
+                    <picture>
+                        <source type="image/webp" srcset="img/desinfection.webp">
+                        <source type="image/jpeg" srcset="img/desinfection.jpg">
+                        <img src="img/desinfection.png" alt="Дезинфицирующие средства" class="card-image" />
+                    </picture>
+                </a>
+                <a href="#" class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">Пищевые аэрозоли</h3>
+                        <p class="card-text">
+                            Безусловно, сплочённость команды профессионалов позволяет
+                            оценить значение форм воздействия.
+                        </p>
+                    </div>
+                    <!-- /.card-content -->
+                    <picture>
+                        <source type="image/webp" srcset="img/food.webp">
+                        <source type="image/jpeg" srcset="img/food.jpg">
+                        <img src="img/food.png" alt="Пищевые аэрозоли" class="card-image" />
+                    </picture>
+                </a>
+                <a href="#" class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">Косметическая продукция</h3>
+                        <p class="card-text">
+                            Лишь интерактивные прототипы призваны к ответу.
+                        </p>
+                    </div>
+                    <!-- /.card-content -->
+                    <picture>
+                        <source type="image/webp" srcset="img/him.webp">
+                        <source type="image/jpeg" srcset="img/him.jpg">
+                        <img src="img/him.png" alt="Косметическая продукция" class="card-image" />
+                    </picture>
+                </a>
+                <a href="#" class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">Краски аэрозольные</h3>
+                        <p class="card-text">
+                            А также стремящиеся вытеснить традиционное производство,
+                            нанотехнологии функционально разнесены на независимые элементы.
+                        </p>
+                    </div>
+                    <!-- /.card-content -->
+                    <picture>
+                        <source type="image/webp" srcset="img/colors.webp">
+                        <source type="image/jpeg" srcset="img/colors.jpg">
+                        <img src="img/colors.png" alt="Краски аэрозольные" class="card-image" />
+                    </picture>
+                </a>
+            </div>
+        </div>
+        <!-- /.container -->
     </section>
 
     <script src="./js/swiper-bundle.min.js"></script>
