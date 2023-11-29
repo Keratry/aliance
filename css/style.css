@@ -127,6 +127,28 @@ a {
     gap: 3.125rem;
 }
 
+.navbar-nav li,
+.navbar-nav li a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.navbar-nav li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #5c8ee6;
+    transition: width 0.2s;
+    bottom: -1px;
+}
+
+.navbar-nav li a:hover::after {
+    width: 100%;
+}
+
 .navbar-phone {
     margin-right: 3.125rem;
     flex-shrink: 0;
@@ -326,6 +348,11 @@ a {
     height: 1px;
     width: 40px;
     background: #5C8EE5;
+    transition: width 0.2s;
+}
+
+.steps-link:hover::before {
+    width: 60px;
 }
 
 .steps-buttons {
@@ -352,23 +379,32 @@ a {
 .cards {
     display: flex;
     flex-wrap: wrap;
-  }
-  .production-cards {
+}
+
+.production-cards {
     margin-top: 3rem;
-  }
-  .card {
+}
+
+.card {
     text-decoration: none;
     flex-basis: 33.33%;
     border: 1px solid #ebebf0;
     position: relative;
     transition: border 0.2s;
-  }
-  
-  .card-content {
+}
+
+.card:hover {
+    border-color: #5C8EE5;
+}
+
+.card-content {
     padding: 2.5rem 3.125rem;
     padding-bottom: 23.6rem;
-  }
-  .card-title {
+    position: relative;
+    z-index: 1;
+}
+
+.card-title {
     font-weight: 400;
     font-size: 1.75rem;
     line-height: 140%;
@@ -376,20 +412,26 @@ a {
     margin-top: 0;
     margin-bottom: 0.625rem;
     transition: color 0.2s;
-  }
-  .card-text {
+}
+
+.card:hover .card-title {
+    color: #5C8EE5;
+}
+
+.card-text {
     font-size: 1rem;
     line-height: 160%;
     color: #828a99;
     margin-bottom: 1rem;
-  }
-  .card-image {
+}
+
+.card-image {
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 0;
     width: 100%;
-  }
+}
 
 @media (max-width: 1700px) {
     html {
@@ -440,6 +482,10 @@ a {
     .slider-buttons,
     .steps-buttons {
         display: flex;
+    }
+
+    .card {
+        flex-basis: 50%;
     }
 }
 
@@ -616,6 +662,10 @@ a {
 
     .header-content {
         padding-top: 3rem;
+    }
+
+    .card {
+        flex-basis: 100%;
     }
 }
 
