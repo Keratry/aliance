@@ -670,7 +670,8 @@ a {
   justify-content: flex-end;
 }
 .cta-form {
-  max-width: 52.5rem;
+  width: 52.5rem;
+  z-index: 1;
 }
 .cta-form-text {
   font-style: normal;
