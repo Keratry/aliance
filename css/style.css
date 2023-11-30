@@ -670,7 +670,7 @@ a {
   justify-content: flex-end;
 }
 .cta-form {
-  max-width: 51.25rem;
+  max-width: 52.5rem;
 }
 .cta-form-text {
   font-style: normal;
@@ -699,9 +699,6 @@ a {
 .input {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   padding: 1.25rem 1.875rem;
   border: 1px solid #e4e4eb;
   background-color: inherit;
@@ -725,7 +722,7 @@ a {
 .input:not(:placeholder-shown).input:not(:focus) ~ .input-group-label {
   top: -0.5rem;
   left: 1.25rem;
-  font-size: 0.625rem;
+  font-size: 10px;
   background-color: inherit;
   padding: 0 0.625rem;
 }
