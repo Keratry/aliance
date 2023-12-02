@@ -4,22 +4,21 @@
     });
 });*/
 const navbar = document.querySelector('.navbar');
-const logoLight = document.querySelector('.logo-light');
-const logo = document.querySelector('.logo');
 const mMenuToggle = document.querySelector('.mobile-menu-toggle');
 const menu = document.querySelector('.mobile-menu');
+const isFront = document.body.classList.contains('home-page');
 
 const liteModeOn = (event) => {
     navbar.classList.add('navbar-light');
-    logo.style.display = 'block';
-    logoLight.style.display = 'none';
 }
 
 const liteModeOff = (event) => {
     navbar.classList.remove('navbar-light');
-    logo.style.display = 'none';
-    logoLight.style.display = 'block';
 }
+
+const changeNavHeight = (height) => {
+    navbar.style.height = height;
+};
 
 // Функция открытия меню
 const openMenu = (event) => {
@@ -35,7 +34,7 @@ const closeMenu = (event) => {
     menu.classList.remove('is-open'); // Удаляем класс is-open с менб
     document.body.classList.remove('lock'); // Возвращаем скролл сайта
 
-    if (pageYOffset == 0) {
+    if (pageYOffset == 0 && isFront) {
         liteModeOff();
     }
 }
@@ -43,7 +42,12 @@ const closeMenu = (event) => {
 
 
 window.addEventListener('scroll', () => {
-    this.scrollY > 1 ? liteModeOn() : liteModeOff();
+
+    this.scrollY > 1 ? navbar.classList.add('navbar-scroll') : navbar.classList.remove('navbar-scroll');
+    if (isFront) {
+        this.scrollY > 1 ? liteModeOn() : liteModeOff();
+    }
+
 });
 
 mMenuToggle.addEventListener('click', (event) => {

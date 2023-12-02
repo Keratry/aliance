@@ -104,6 +104,9 @@ a {
 .navbar-light {
     background: #fff;
     color: #292D33;
+}
+
+.navbar-scroll {
     height: 4.625rem;
 }
 
@@ -126,8 +129,16 @@ a {
 
 }
 
-.logo {
+.logo-dark {
     display: none;
+}
+
+.navbar-light .logo-light {
+    display: none;
+}
+
+.navbar-light .logo-dark {
+    display: initial;
 }
 
 .navbar-light .header-logo-path {
@@ -1176,11 +1187,11 @@ a {
     }
 
     .close-menu .mobile-menu-line:first-child {
-        transform: rotate(45deg) translateY(10px);
+        transform: rotate(45deg) translateY(9px);
     }
 
     .close-menu .mobile-menu-line:last-child {
-        transform: rotate(-45deg) translateY(-10px);
+        transform: rotate(-45deg) translateY(-9px);
     }
 
     .navbar-light .mobile-menu-line {
