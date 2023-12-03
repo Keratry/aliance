@@ -29,7 +29,7 @@
 
         <a href="tel:+74996861014">+7 (499) 686-10-14</a>
     </div>
-    <button class="navbar-button button" data-toggle="modal">
+    <button class="navbar-button button" data-toggle="modal" data-target="#feedback-modal">
         <svg class="icon" width="24" height="24">
             <use href="./img/sprite.svg#phone"></use>
         </svg>
