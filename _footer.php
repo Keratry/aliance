@@ -2,7 +2,7 @@
     <div class="bg-grey section-cta">
         <img src="img/cta.png" alt="call to action" class="cta-image" />
         <div class="cta-from-wrapper container">
-            <form action="#" method="POST" class="cta-form">
+            <form action="./handler.php" method="POST" class="cta-form">
                 <h2 class="section-title cta-form-title">Хотите сотрудничать?</h2>
                 <p class="cta-form-text">
                     Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время
@@ -11,12 +11,12 @@
                 </p>
                 <div class="input-group-wrapper">
                     <div class="input-group">
-                        <input id="user-name" type="text" class="input" name="username" placeholder=" " maxlength="100" required />
+                        <input id="user-name" type="text" class="input" name="username" placeholder=" " maxlength="50" required />
                         <label class="input-group-label" for="user-name">Имя</label>
                     </div>
                     <!-- /.input-group -->
                     <div class="input-group">
-                        <input id="user-phone" type="tel" name="userphone" class="input phone-mask" placeholder=" " maxlength="30" required />
+                        <input id="user-phone" type="tel" name="userphone" class="input phone-mask" placeholder=" " maxlength="20" required />
                         <label class="input-group-label" for="user-phone">Номер телефона</label>
                     </div>
                     <!-- /.input-group -->
@@ -167,7 +167,7 @@
 <div class="modal" id="feedback-modal">
     <div class="modal-dialog">
         <h2 class="modal-title">Есть вопросы?</h2>
-        <a href="#" class="modal-close">
+        <a href="#" class="modal-close" data-toggle="modal">
             <svg class="close-icon" width="24" height="24">
                 <use href="img/sprite.svg#close"></use>
             </svg>
@@ -180,12 +180,12 @@
         <form action="handler.php" method="POST" class="modal-form">
             <div class="input-group-wrapper input-group-vertical">
                 <div class="input-group modal-input-group">
-                    <input id="modal-user-name" type="text" class="input modal-input" placeholder=" " maxlength="100" name="username" />
+                    <input id="modal-user-name" type="text" class="input modal-input" placeholder=" " maxlength="50" name="username" required />
                     <label class="input-group-label modal-input-label" for="modal-user-name">Имя</label>
                 </div>
                 <!-- /.input-group -->
                 <div class="input-group modal-input-group">
-                    <input id="modal-user-phone" type="tel" class="input modal-input phone-mask" name="userphone" placeholder=" " maxlength="20" require />
+                    <input id="modal-user-phone" type="tel" class="input modal-input phone-mask" name="userphone" placeholder=" " maxlength="20" required />
                     <label class="input-group-label modal-input-label" for="modal-user-phone">Номер телефона</label>
                 </div>
                 <!-- /.input-group -->
@@ -211,4 +211,5 @@
 </div><!-- /.modal -->
 
 <script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/just-validate.production.min.js"></script>
 <script src="./js/main.js"></script>

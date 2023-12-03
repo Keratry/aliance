@@ -126,6 +126,7 @@ const modal = document.querySelector('.modal');
 const modalDialog = document.querySelector('.modal-dialog');
 
 document.addEventListener('click', (event) => {
+
     if (event.target.dataset.toggle == 'modal' ||
         event.target.parentNode.dataset.toggle == 'modal' ||
         (!event.composedPath().includes(modalDialog) && modal.classList.contains('is-open'))
@@ -147,3 +148,65 @@ document.addEventListener('keyup', (event) => {
 //         modal.classList.add('is-open');
 //     })
 // });
+
+const forms = document.querySelectorAll('form');
+forms.forEach((form) => {
+
+    const validation = new JustValidate(form, {
+        errorFieldCssClass: "is-invalid",
+    });
+
+    validation
+        .addField("[name=username]", [
+            {
+                rule: "required",
+                errorMessage: "Укажите имя",
+            },
+            {
+                rule: "minLength",
+                value: 2,
+                errorMessage: "Минимально 2 символа",
+            },
+            {
+                rule: "maxLength",
+                value: 50,
+                errorMessage: "Максимально 50 символов",
+            },
+        ])
+        .addField("[name=userphone]", [
+            {
+                rule: "required",
+                errorMessage: "Укажите телефон",
+            },
+            {
+                rule: "minLength",
+                value: 8,
+                errorMessage: "Минимально 8 символов",
+            },
+            {
+                rule: "maxLength",
+                value: 20,
+                errorMessage: "Максимально 50 символов",
+            },
+        ])
+        .onSuccess((event) => {
+            const thisForm = event.target;
+            const formData = new FormData(thisForm);
+            const ajaxSend = (formData) => {
+                fetch(thisForm.getAttribute('action'), {
+                    method: thisForm.getAttribute('method'),
+                    body: formData,
+                }).then((response) => {
+                    if (response.ok) {
+                        thisForm.reset();
+                        alert('Форма отправлена');
+                    } else {
+                        console.log(response.statusText);
+                    }
+                });
+            };
+            ajaxSend(formData);
+
+        });
+
+});
