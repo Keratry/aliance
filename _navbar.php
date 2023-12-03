@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light">
+<nav class="navbar <?= $navbar_style??''; ?>">
     <a href="" class="mobile-menu-toggle">
         <div class="mobile-menu-line"></div>
         <div class="mobile-menu-line"></div>
@@ -6,6 +6,9 @@
     </a>
 
     <a href="/" class="navbar-logo">
+        <svg class="logo-svg logo-light">
+            <use href="./img/sprite.svg#logo-light"></use>
+        </svg>
         <svg class="logo-svg logo-dark">
             <use href="./img/sprite.svg#logo"></use>
         </svg>
