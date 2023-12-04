@@ -1,5 +1,5 @@
 <header class="page-header <?= $header_style; ?>">
-  <?php 
+  <?php
   // <img src="img/thumb.png" alt="" class="page-header-thumb" /> 
   ?>
   <div class="container">
@@ -9,9 +9,21 @@
       <li class="breadcrumbs-item">
         <a href="#" class="breadcrumbs-link">Главная</a>
       </li>
-      <li class="breadcrumbs-item active">
-        <a href="#" class="breadcrumbs-link"><?= $page_title ?></a>
-      </li>
+      <?php
+      if (!empty($breadcrumbs)) {
+        $breadcrumbs_count = count($breadcrumbs);
+        foreach ($breadcrumbs as $breadcrumb) {
+          $active_link = (++$i == $breadcrumbs_count) ? ' active' : '';
+          echo '<li class="breadcrumbs-item' . $active_link . '">';
+          echo "<a href='{$breadcrumb['link']}' class='breadcrumbs-link'>{$breadcrumb['name']}</a>";
+          echo '</li>';
+        }
+      } else {
+        echo '<li class="breadcrumbs-item active">';
+        echo '<a href="#" class="breadcrumbs-link">' . $page_title . '</a>';
+        echo '</li>';
+      }
+      ?>
     </ul>
   </div>
   <!-- /.container -->

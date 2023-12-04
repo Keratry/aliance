@@ -210,13 +210,23 @@ forms.forEach((form) => {
                 }).then((response) => {
                     if (response.ok) {
                         thisForm.reset();
-                        // Закрываем текущее окно
-                        currentModal.classList.remove('is-open');
 
+                        if (currentModal !== undefined) {
+                            // Закрываем текущее окно
+                            currentModal.classList.remove('is-open');
+                        }
                         // Открываем окно с диалогом об успешной отправке
                         alertModal.classList.add('is-open');
                         // Назначаем текущее окно
                         currentModal = alertModal;
+                        
+                        modalDialog = currentModal.querySelector(".modal-dialog");
+                        currentModal.addEventListener("click", (event) => {
+                            if (!event.composedPath().includes(modalDialog)) {
+                                currentModal.classList.remove("is-open");
+                            }
+                        });
+
                     } else {
                         console.log(response.statusText);
                     }

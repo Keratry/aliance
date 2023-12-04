@@ -16,10 +16,10 @@
 
     <ul class="navbar-nav">
         <li><a href="./about.php">О компании</a></li>
-        <li><a href="#">Контрактное производство</a></li>
-        <li><a href="#">Собственные торговые марки</a></li>
+        <li><a href="./contracts.php">Контрактное производство</a></li>
+        <li><a href="./trademarks.php">Собственные торговые марки</a></li>
         <li><a href="#">Новости</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li><a href="./contacts.php">Контакты</a></li>
     </ul>
 
     <div class="navbar-phone">

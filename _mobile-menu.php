@@ -25,7 +25,7 @@
             </ul>
         </li>
         <li class="mobile-menu-nav-item">
-            <a class="mobile-menu-link" href="#">Собственные марки</a>
+            <a class="mobile-menu-link" href="./trademarks.php">Собственные марки</a>
             <ul class="mobile-submenu">
                 <li class="mobile-submenu-item">
                     <a hclass="mobile-submenu-link" ref="#">Автохимия AG-Tech</a>
@@ -36,7 +36,7 @@
             </ul>
         </li>
         <li class="mobile-menu-nav-item"><a class="mobile-menu-link" href="#">Новости</a></li>
-        <li class="mobile-menu-nav-item"><a class="mobile-menu-link" href="#">Контакты</a></li>
+        <li class="mobile-menu-nav-item"><a class="mobile-menu-link" href="./contacts.php">Контакты</a></li>
     </ul>
 
     <a href="tel:+74996861014" class="mobile-phone">+7 (499) 686-10-14</a>
