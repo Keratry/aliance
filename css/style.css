@@ -3,6 +3,7 @@
     src: local('Bebas Neue Regular'), local('BebasNeueRegular'), url('../fonts/bebasneueregular.woff2') format('woff2'), url('../fonts/bebasneueregular.woff') format('woff'), url('../fonts/bebasneueregular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 * {
@@ -27,6 +28,7 @@ body {
     max-width: 120rem;
     margin: auto;
     background-color: #FAFBFC;
+    color: #828A99;
 }
 
 body.lock {
@@ -438,6 +440,10 @@ a {
 
 .we-experts {
     flex-direction: row-reverse;
+}
+
+.we-experts .section-title {
+    max-width: 37.5rem;
 }
 
 .we-experts-content {
@@ -1284,6 +1290,14 @@ a {
     margin-bottom: 1.25rem;
 }
 
+.research .section-title {
+    max-width: 37.5rem;
+}
+
+.research .text {
+    columns: 2 auto;
+    column-gap: 6.25rem;
+}
 
 @media (max-width: 1700px) {
     html {
@@ -1298,6 +1312,10 @@ a {
 @media (max-width: 1460px) {
     html {
         font-size: 13px;
+    }
+
+    body {
+        font-size: 14px;
     }
 
     .navbar-logo {
@@ -1629,6 +1647,10 @@ a {
 
     .our-production-image {
         justify-self: center;
+    }
+
+    .research .text {
+        columns: 1;
     }
 }
 
