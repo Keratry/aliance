@@ -2,7 +2,6 @@
     <div class="container">
         <?php
         if (!empty($blog_title)) {
-            echo '<div class="separator"></div>';
             echo '<h2 class="section-title">' . $blog_title . '</h2>';
         }
         ?>

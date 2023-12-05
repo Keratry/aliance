@@ -183,6 +183,10 @@ forms.forEach((form) => {
                 value: 50,
                 errorMessage: "Максимально 50 символов",
             },
+            {
+                rule: 'customRegexp',
+                value: /^[А-Яа-яЁё ]*$/,
+            },
         ])
         .addField("[name=userphone]", [
             {
@@ -219,7 +223,7 @@ forms.forEach((form) => {
                         alertModal.classList.add('is-open');
                         // Назначаем текущее окно
                         currentModal = alertModal;
-                        
+
                         modalDialog = currentModal.querySelector(".modal-dialog");
                         currentModal.addEventListener("click", (event) => {
                             if (!event.composedPath().includes(modalDialog)) {

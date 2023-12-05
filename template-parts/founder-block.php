@@ -3,7 +3,6 @@
     <div class="container">
         <div class="founder-content-wrapper">
             <div class="founder-content">
-                <div class="separator"></div>
                 <h2 class="section-title">Отношение к делу <br />и к клиентам</h2>
                 <p class="founder-text">
                     Кстати, интерактивные прототипы описаны максимально подробно.

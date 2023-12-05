@@ -2,7 +2,6 @@
     <div class="container">
         <?php
         if (!empty($production_title)) {
-            echo '<div class="separator"></div>';
             echo '<h2 class="section-title">' . $production_title . '</h2>';
         }
         ?>

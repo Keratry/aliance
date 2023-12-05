@@ -2,7 +2,6 @@
     <div class="container">
         <?php
         if (!empty($trademarks_title)) {
-            echo '<div class="separator"></div>';
             echo '<h2 class="section-title">' . $trademarks_title . '</h2>';
         }
         ?>

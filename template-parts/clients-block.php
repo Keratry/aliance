@@ -1,6 +1,6 @@
 <section class="section clients section-clients">
     <div class="container">
-        <div class="separator"></div>
+        
         <div class="clients-wrapper">
             <div class="clients-content">
                 <h2 class="section-title">
